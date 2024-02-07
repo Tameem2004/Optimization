@@ -52,7 +52,7 @@ int main()
 {
     int arr1[100][100],arr2[100][100];
     int s1,s2;
-    printf("Enter Size of Matrix\n");
+    printf("ENTER THE NUMBER OF ROWS AND COLUMNS OF MATRIX");
     scanf("%d",&s1);
     scanf("%d",&s2);
     printf("Enter Values In 1st Matrix");
