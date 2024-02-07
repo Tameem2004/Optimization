@@ -1,12 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define N 3
-void addition(int A[N][N],int B[N][N])
+void addition(int A[100][100],int B[100][100],int s1,int s2)
 {
-    int C[N][N],i,j;
-    for(i=0;i<N;i++)
+    int C[s1][s2],i,j;
+    for(i=0;i<s1;i++)
     {
-        for(j=0;j<N;j++)
+        for(j=0;j<s2;j++)
         {
             C[i][j]=A[i][j]+B[i][j];
             
@@ -15,9 +14,9 @@ void addition(int A[N][N],int B[N][N])
     }
 
     printf("MATRIX ADDITION IS: \n");
-    for(i=0;i<N;i++)
+    for(i=0;i<s1;i++)
     {
-        for(j=0;j<N;j++)
+        for(j=0;j<s2;j++)
         {
             printf("%d ",C[i][j]);
         }
@@ -25,12 +24,12 @@ void addition(int A[N][N],int B[N][N])
     }
 }
 
-void subtraction(int A[N][N],int B[N][N])
+void subtraction(int A[100][100],int B[100][100],int s1,int s2)
 {
-    int C[N][N],i,j;
-    for(i=0;i<N;i++)
+    int C[s1][s2],i,j;
+    for(i=0;i<s1;i++)
     {
-        for(j=0;j<N;j++)
+        for(j=0;j<s2;j++)
         {
             C[i][j]=A[i][j]-B[i][j];
             
@@ -39,9 +38,9 @@ void subtraction(int A[N][N],int B[N][N])
     }
 
     printf("MATRIX SUBTRACTION IS: \n");
-    for(i=0;i<N;i++)
+    for(i=0;i<s1;i++)
     {
-        for(j=0;j<N;j++)
+        for(j=0;j<s2;j++)
         {
             printf("%d ",C[i][j]);
         }
@@ -51,23 +50,27 @@ void subtraction(int A[N][N],int B[N][N])
 
 int main()
 {
-    int arr1[N][N],arr2[N][N];
+    int arr1[100][100],arr2[100][100];
+    int s1,s2;
+    printf("Enter Size of Matrix\n");
+    scanf("%d",&s1);
+    scanf("%d",&s2);
     printf("Enter Values In 1st Matrix");
-    for(int i=0;i<N;i++)
+    for(int i=0;i<s1;i++)
     {
-        for(int j=0;j<N;j++)
+        for(int j=0;j<s2;j++)
         {
             scanf("%d",&arr1[i][j]);
         }
     }
     printf("Enter Values In 2nd Matrix");
-    for(int i=0;i<N;i++)
+    for(int i=0;i<s1;i++)
     {
-        for(int j=0;j<N;j++)
+        for(int j=0;j<s2;j++)
         {
             scanf("%d",&arr2[i][j]);
         }
     }
-    addition(arr1,arr2);
-    subtraction(arr1,arr2);
+    addition(arr1,arr2,s1,s2);
+    subtraction(arr1,arr2,s1,s2);
 }
