@@ -61,7 +61,7 @@ int main()
     }
     if(c1!=r2)
         {
-            printf("\n YOUR ARRAY CANNOT BE MULTIPLIABLE");
+            printf("\n YOUR ARRAY CANNOT BE MULTIPLIED");
             exit(1);
         }
     else 
